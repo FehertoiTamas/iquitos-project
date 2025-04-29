@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "Bienvenidos a [Nombre del Pueblo]",
+    "subtitle": "Un rincón mágico en la Amazonía",
+    "explore": "Explora"
+  },
+  "about": {
+    "title": "Sobre el Pueblo",
+    "description": "Nuestro pueblo se encuentra en el corazón de la selva amazónica, donde el río se encuentra con la jungla. Somos una comunidad indígena que ha vivido aquí por generaciones, manteniendo nuestra forma de vida tradicional a través de la pesca, la artesanía y la vida sostenible.",
+    "images": {
+      "1": "Vida del pueblo",
+      "2": "Río Amazonas",
+      "3": "Reunión comunitaria"
+    }
+  },
+  "culture": {
+    "title": "Cultura y Estilo de Vida",
+    "food": "Gastronomía Tradicional",
+    "foodDescription": "Descubre nuestros platos amazónicos únicos hechos con ingredientes locales",
+    "music": "Música y Danza",
+    "musicDescription": "Experimenta nuestras actuaciones tradicionales de música y danza",
+    "crafts": "Artesanías",
+    "craftsDescription": "Explora nuestras artesanías y arte tradicional"
+  },
+  "support": {
+    "title": "Cómo Apoyar",
+    "donation": "Donaciones",
+    "donationDescription": "Apoya a nuestra comunidad a través de contribuciones financieras",
+    "volunteer": "Voluntariado",
+    "volunteerDescription": "Únete a nosotros y ayuda con la educación y proyectos comunitarios",
+    "tourism": "Turismo",
+    "tourismDescription": "Visítanos y experimenta la vida amazónica auténtica",
+    "cta": "Apóyanos"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "getInTouch": "Ponte en Contacto",
+    "email": "Email: contacto@pueblo.org",
+    "phone": "Teléfono: +51 XXX XXX XXX",
+    "facebook": "https://facebook.com/pueblo"
+  },
+  "footer": {
+    "copyright": "© 2024 [Nombre del Pueblo]. Todos los derechos reservados."
+  }
+} 

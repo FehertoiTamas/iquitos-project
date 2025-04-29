@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "Welcome to [Village Name]",
+    "subtitle": "A magical place along the Amazon",
+    "explore": "Explore"
+  },
+  "about": {
+    "title": "About the Village",
+    "description": "Our village is located in the heart of the Amazon rainforest, where the river meets the jungle. We are a community of indigenous people who have lived here for generations, maintaining our traditional way of life through fishing, crafting, and sustainable living.",
+    "images": {
+      "1": "Village life",
+      "2": "Amazon river",
+      "3": "Community gathering"
+    }
+  },
+  "culture": {
+    "title": "Culture & Lifestyle",
+    "food": "Traditional Cuisine",
+    "foodDescription": "Discover our unique Amazonian dishes made with local ingredients",
+    "music": "Music & Dance",
+    "musicDescription": "Experience our traditional music and dance performances",
+    "crafts": "Handicrafts",
+    "craftsDescription": "Explore our handmade crafts and traditional art"
+  },
+  "support": {
+    "title": "How to Support",
+    "donation": "Donations",
+    "donationDescription": "Support our community through financial contributions",
+    "volunteer": "Volunteer",
+    "volunteerDescription": "Join us and help with education and community projects",
+    "tourism": "Tourism",
+    "tourismDescription": "Visit us and experience authentic Amazonian life",
+    "cta": "Support Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "getInTouch": "Get in Touch",
+    "email": "Email: contact@village.org",
+    "phone": "Phone: +51 XXX XXX XXX",
+    "facebook": "https://facebook.com/village"
+  },
+  "footer": {
+    "copyright": "© 2024 [Village Name]. All rights reserved."
+  }
+} 
