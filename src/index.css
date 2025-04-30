@@ -183,6 +183,28 @@ section h2 {
   max-width: 1400px;
   width: 95%;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-decoration {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.about-decoration.left {
+  bottom: -50px;
+  left: -50px;
+  transform: rotate(-15deg);
+}
+
+.about-decoration.right {
+  bottom: -50px;
+  right: -50px;
+  transform: rotate(15deg);
 }
 
 .about-content,
@@ -193,6 +215,7 @@ section h2 {
   width: 95%;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
 .about-gallery {

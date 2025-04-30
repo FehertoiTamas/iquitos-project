@@ -6,6 +6,16 @@ function About() {
 
   return (
     <section className="about" id="about">
+      <img
+        src="/images/geometric.png"
+        alt=""
+        className="about-decoration left"
+      />
+      <img
+        src="/images/geometric.png"
+        alt=""
+        className="about-decoration right"
+      />
       <ScrollAnimation className="about-content">
         <h2>{t("about.title")}</h2>
         <div className="about-text">
