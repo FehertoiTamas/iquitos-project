@@ -1,44 +1,50 @@
 {
   "hero": {
-    "title": "Bienvenidos a [Nombre del Pueblo]",
-    "subtitle": "Un rincón mágico en la Amazonía",
-    "explore": "Explora"
+    "title": "Bienvenido a [Nombre del Pueblo]",
+    "subtitle": "Un lugar mágico a lo largo del Amazonas",
+    "explore": "Explorar"
   },
   "about": {
     "title": "Sobre el Pueblo",
-    "description": "Nuestro pueblo se encuentra en el corazón de la selva amazónica, donde el río se encuentra con la jungla. Somos una comunidad indígena que ha vivido aquí por generaciones, manteniendo nuestra forma de vida tradicional a través de la pesca, la artesanía y la vida sostenible.",
+    "description": "Nuestro pueblo está ubicado en el corazón de la selva amazónica, donde el río se encuentra con la jungla. Somos una comunidad de indígenas que hemos vivido aquí por generaciones, manteniendo nuestra forma de vida tradicional a través de la pesca, la artesanía y la vida sostenible.",
     "images": {
-      "1": "Vida del pueblo",
+      "1": "Vida en el pueblo",
       "2": "Río Amazonas",
       "3": "Reunión comunitaria"
     }
   },
   "programs": {
-    "title": "Programas que nunca olvidarás",
+    "title": "Programas que Nunca Olvidarás",
+    "hours": "{{count}} horas",
+    "difficulty": {
+      "easy": "Fácil",
+      "medium": "Medio"
+    },
+    "price": "${{price}}",
     "items": {
       "jungle_trek": {
-        "title": "Caminata por la selva",
-        "description": "Recorrido guiado por la selva con guías locales."
+        "title": "Trekking en la Jungla",
+        "description": "Tour guiado por la selva con guías locales."
       },
       "piranha_fishing": {
-        "title": "Pesca de pirañas",
-        "description": "¡Atrapa pirañas con técnicas tradicionales en el Amazonas!"
+        "title": "Pesca de Pirañas",
+        "description": "¡Prueba las técnicas tradicionales de pesca de pirañas en el Amazonas!"
       },
       "dolphin_swim": {
-        "title": "Nado con delfines rosados",
-        "description": "Conoce a los famosos delfines rosados en un tour fluvial."
+        "title": "Nado con Delfines Rosados",
+        "description": "Conoce a los famosos delfines rosados en un tour por el río."
       },
       "campfire": {
-        "title": "Fogata y música",
-        "description": "Música local y cuentos junto a una fogata amazónica."
+        "title": "Fogata y Música",
+        "description": "Música local, historias y baile bajo las estrellas."
       },
       "bird_watching": {
-        "title": "Observación de aves",
+        "title": "Observación de Aves",
         "description": "Descubre la increíble diversidad de aves amazónicas."
       },
       "canoe_tour": {
-        "title": "Tour en canoa",
-        "description": "Explora los ríos y lagos en una canoa tradicional."
+        "title": "Tour en Canoa",
+        "description": "Explora ríos y lagos en una canoa tradicional."
       }
     }
   },

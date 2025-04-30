@@ -15,6 +15,12 @@
   },
   "programs": {
     "title": "Programs You'll Never Forget",
+    "hours": "{{count}} hours",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium"
+    },
+    "price": "${{price}}",
     "items": {
       "jungle_trek": {
         "title": "Jungle Trek",

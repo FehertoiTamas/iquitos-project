@@ -11,44 +11,44 @@ const Programs = () => {
     {
       id: "jungle_trek",
       icon: "/images/jungle-trek.webp",
-      duration: "3-4 hours",
+      duration: "3-4",
       difficulty: "medium",
-      price: "$50",
+      price: "50",
     },
     {
       id: "piranha_fishing",
       icon: "/images/piranha-fishing.webp",
-      duration: "2-3 hours",
+      duration: "2-3",
       difficulty: "easy",
-      price: "$40",
+      price: "40",
     },
     {
       id: "dolphin_swim",
       icon: "/images/dolphin-swim.webp",
-      duration: "4-5 hours",
+      duration: "4-5",
       difficulty: "easy",
-      price: "$60",
+      price: "60",
     },
     {
       id: "campfire",
       icon: "/images/campfire.webp",
-      duration: "2 hours",
+      duration: "2",
       difficulty: "easy",
-      price: "$30",
+      price: "30",
     },
     {
       id: "bird_watching",
       icon: "/images/bird-watching.webp",
-      duration: "3 hours",
+      duration: "3",
       difficulty: "easy",
-      price: "$45",
+      price: "45",
     },
     {
       id: "canoe_tour",
       icon: "/images/canoe-tour.webp",
-      duration: "2-3 hours",
+      duration: "2-3",
       difficulty: "medium",
-      price: "$40",
+      price: "40",
     },
   ];
 
@@ -100,9 +100,15 @@ const Programs = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 + 0.4 }}
               >
-                <span className="duration">⏱️ {program.duration}</span>
-                <span className="difficulty">🏃 {program.difficulty}</span>
-                <span className="price">💰 {program.price}</span>
+                <span className="duration">
+                  ⏱️ {t("programs.hours", { count: program.duration })}
+                </span>
+                <span className="difficulty">
+                  🏃 {t(`programs.difficulty.${program.difficulty}`)}
+                </span>
+                <span className="price">
+                  💰 {t("programs.price", { price: program.price })}
+                </span>
               </motion.div>
             </motion.div>
           ))}
