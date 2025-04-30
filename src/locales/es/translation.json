@@ -75,7 +75,9 @@
     "getInTouch": "Ponte en Contacto",
     "email": "Email: contacto@pueblo.org",
     "phone": "Teléfono: +51 XXX XXX XXX",
-    "facebook": "https://facebook.com/pueblo"
+    "facebook": "https://facebook.com/pueblo",
+    "instagram": "https://instagram.com/pueblo",
+    "whatsapp": "https://wa.me/51XXXXXXXXX"
   },
   "footer": {
     "copyright": "© 2024 [Nombre del Pueblo]. Todos los derechos reservados."

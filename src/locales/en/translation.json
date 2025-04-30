@@ -75,7 +75,9 @@
     "getInTouch": "Get in Touch",
     "email": "Email: contact@village.org",
     "phone": "Phone: +51 XXX XXX XXX",
-    "facebook": "https://facebook.com/village"
+    "facebook": "https://facebook.com/village",
+    "instagram": "https://instagram.com/village",
+    "whatsapp": "https://wa.me/51XXXXXXXXX"
   },
   "footer": {
     "copyright": "© 2024 [Village Name]. All rights reserved."

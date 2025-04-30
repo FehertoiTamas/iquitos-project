@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import "./Contact.css";
 
 function Contact() {
   const { t } = useTranslation();
@@ -17,8 +19,28 @@ function Contact() {
                 href={t("contact.facebook")}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Facebook"
               >
-                Facebook
+                <FaFacebook className="social-icon" />
+              </a>
+              <a
+                href={t("contact.instagram")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="social-icon" />
+              </a>
+              <a
+                href={t("contact.whatsapp")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="social-icon" />
               </a>
             </div>
           </div>
