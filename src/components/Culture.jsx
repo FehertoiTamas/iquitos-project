@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "./ScrollAnimation";
 
 function Culture() {
   const { t } = useTranslation();
 
   return (
     <section className="culture" id="culture">
-      <div className="culture-content">
+      <ScrollAnimation className="culture-content">
         <h2>{t("culture.title")}</h2>
         <div className="culture-grid">
           <div className="culture-item">
@@ -24,7 +25,7 @@ function Culture() {
             <p>{t("culture.craftsDescription")}</p>
           </div>
         </div>
-      </div>
+      </ScrollAnimation>
     </section>
   );
 }

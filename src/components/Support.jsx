@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "./ScrollAnimation";
 
 function Support() {
   const { t } = useTranslation();
 
   return (
     <section className="support" id="support">
-      <div className="support-content">
+      <ScrollAnimation className="support-content">
         <h2>{t("support.title")}</h2>
         <div className="support-options">
           <div className="support-option">
@@ -22,7 +23,7 @@ function Support() {
           </div>
         </div>
         <button className="support-btn">{t("support.cta")}</button>
-      </div>
+      </ScrollAnimation>
     </section>
   );
 }
