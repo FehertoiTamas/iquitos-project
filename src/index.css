@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
 :root {
   --primary-green: #2E7D32;
   --secondary-green: #4CAF50;
@@ -14,6 +17,8 @@
   --gradient-top: #1B5E20;
   --gradient-bottom: #004D40;
   --gradient-accent: #2E7D32;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Lora', serif;
 }
 
 * {
@@ -23,7 +28,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   color: var(--black);
   background: linear-gradient(to bottom,
@@ -124,13 +129,17 @@ header {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .hero .subtitle {
   font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 2rem;
+  letter-spacing: 0.02em;
 }
 
 .explore-btn {
@@ -152,6 +161,14 @@ section {
   padding: 4rem 1rem;
   position: relative;
   width: 100%;
+}
+
+section h2 {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
 }
 
 .about,
@@ -421,4 +438,15 @@ footer {
   .map-container {
     height: 250px;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
 }

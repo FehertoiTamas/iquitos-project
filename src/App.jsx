@@ -6,7 +6,7 @@ import About from "./components/About";
 import Culture from "./components/Culture";
 import Support from "./components/Support";
 import Contact from "./components/Contact";
-
+import Gallery from "./components/Gallery";
 function App() {
   const { t } = useTranslation();
 
@@ -20,6 +20,7 @@ function App() {
           <Hero />
           <About />
           <Culture />
+          <Gallery />
           <Support />
           <Contact />
         </main>
