@@ -13,7 +13,7 @@ function LanguageSwitcher() {
         onClick={() => changeLanguage("es")}
         className={`language-btn ${i18n.language === "es" ? "active" : ""}`}
       >
-        🇪🇸
+        ES
       </button>
       <button
         onClick={() => changeLanguage("en")}

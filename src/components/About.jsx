@@ -12,9 +12,9 @@ function About() {
           <p>{t("about.description")}</p>
         </div>
         <div className="about-gallery">
-          <img src="/images/village-1.jpg" alt={t("about.images.1")} />
-          <img src="/images/village-2.jpg" alt={t("about.images.2")} />
-          <img src="/images/village-3.jpg" alt={t("about.images.3")} />
+          <img src="/images/village-1.webp" alt={t("about.images.1")} />
+          <img src="/images/village-2.webp" alt={t("about.images.2")} />
+          <img src="/images/village-3.webp" alt={t("about.images.3")} />
         </div>
       </ScrollAnimation>
     </section>
