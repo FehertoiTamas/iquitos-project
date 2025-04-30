@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import "./Gallery.css";
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
   const images = [
-    { id: 1, src: "/Images/gallery1.webp", alt: "Gallery Image 1" },
-    { id: 2, src: "/Images/gallery2.webp", alt: "Gallery Image 2" },
-    { id: 3, src: "/Images/gallery3.webp", alt: "Gallery Image 3" },
-    { id: 4, src: "/Images/gallery4.webp", alt: "Gallery Image 4" },
-    { id: 5, src: "/Images/gallery5.webp", alt: "Gallery Image 5" },
-    { id: 6, src: "/Images/gallery6.webp", alt: "Gallery Image 6" },
+    { id: 1, src: "/images/gallery1.webp", alt: "Gallery Image 1" },
+    { id: 2, src: "/images/gallery2.webp", alt: "Gallery Image 2" },
+    { id: 3, src: "/images/gallery3.webp", alt: "Gallery Image 3" },
+    { id: 4, src: "/images/gallery4.webp", alt: "Gallery Image 4" },
+    { id: 5, src: "/images/gallery5.webp", alt: "Gallery Image 5" },
+    { id: 6, src: "/images/gallery6.webp", alt: "Gallery Image 6" },
   ];
   const closeModal = () => setSelectedImageIndex(null);
 
@@ -30,7 +32,7 @@ const Gallery = () => {
   return (
     <section className="gallery-section" id="gallery">
       <div className="gallery-container">
-        <h2 className="gallery-title">Gallery</h2>
+        <h2 className="gallery-title">{t("gallery.title")}</h2>
 
         <div className="gallery-grid">
           {images.map((image, index) => (

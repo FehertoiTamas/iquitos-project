@@ -22,6 +22,9 @@
     "crafts": "Artesanías",
     "craftsDescription": "Explora nuestras artesanías y arte tradicional"
   },
+  "gallery": {
+    "title": "Flora y Fauna"
+  },
   "support": {
     "title": "Cómo Apoyar",
     "donation": "Donaciones",
