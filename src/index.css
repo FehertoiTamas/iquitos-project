@@ -6,6 +6,14 @@
   --blue: #1976D2;
   --white: #FFFFFF;
   --black: #212121;
+  --background-color: #f5f5f5;
+  --pattern-color: rgba(46, 125, 50, 0.05);
+  --gradient-start: #1B5E20;
+  --gradient-middle: #2E7D32;
+  --gradient-end: #4CAF50;
+  --gradient-top: #1B5E20;
+  --gradient-bottom: #004D40;
+  --gradient-accent: #2E7D32;
 }
 
 * {
@@ -18,12 +26,39 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: var(--black);
+  background: linear-gradient(to bottom,
+      var(--gradient-top) 0%,
+      var(--gradient-accent) 50%,
+      var(--gradient-bottom) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 50% 0%,
+      rgba(255, 255, 255, 0.15) 0%,
+      transparent 50%),
+    radial-gradient(circle at 50% 100%,
+      rgba(0, 0, 0, 0.1) 0%,
+      transparent 50%);
+  z-index: -1;
+  opacity: 0.7;
 }
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 header {
@@ -114,28 +149,39 @@ header {
 }
 
 section {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
+  position: relative;
+  width: 100%;
 }
 
 .about,
 .culture,
 .support,
 .contact {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 1400px;
+  width: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .about-content,
 .culture-content,
 .support-content,
 .contact-content {
-  max-width: 1200px;
+  max-width: 1400px;
+  width: 95%;
   margin: 0 auto;
+  position: relative;
 }
 
 .about-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -143,7 +189,14 @@ section {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .culture-grid {
@@ -155,14 +208,26 @@ section {
 
 .culture-item {
   text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.culture-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .culture-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .support-options {
@@ -173,17 +238,25 @@ section {
 }
 
 .support-option {
-  background: #f5f5f5;
-  padding: 2rem;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
   text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.support-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .support-btn {
-  background: var(--primary-green);
+  background: var(--gradient-accent);
   color: var(--white);
   border: none;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.5rem;
   font-size: 1.2rem;
   border-radius: 30px;
   cursor: pointer;
@@ -191,6 +264,35 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.support-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.1) 100%);
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+
+.support-btn:hover {
+  background: var(--gradient-bottom);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.support-btn:hover::before {
+  transform: translateX(-100%);
 }
 
 .contact-info {
@@ -203,8 +305,10 @@ section {
 .map-container {
   width: 100%;
   height: 450px;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 footer {
@@ -215,16 +319,106 @@ footer {
   margin-top: auto;
 }
 
+@media (max-width: 1600px) {
+
+  .about,
+  .culture,
+  .support,
+  .contact {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .about,
+  .culture,
+  .support,
+  .contact {
+    width: 95%;
+    max-width: 100%;
+    margin: 2rem 1rem;
+  }
+
+  .about-gallery,
+  .culture-grid,
+  .support-options,
+  .contact-info {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero .subtitle {
-    font-size: 1.2rem;
-  }
-
   section {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+  }
+
+  .about,
+  .culture,
+  .support,
+  .contact {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 15px;
+  }
+
+  .about-gallery,
+  .culture-grid,
+  .support-options,
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-gallery img,
+  .culture-item img {
+    height: 180px;
+  }
+
+  .culture-item,
+  .support-option {
+    padding: 1.5rem;
+  }
+
+  .support-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2rem 0.5rem;
+  }
+
+  .about,
+  .culture,
+  .support,
+  .contact {
+    border-radius: 10px;
+  }
+
+  .about-gallery img,
+  .culture-item img {
+    height: 150px;
+  }
+
+  .culture-item,
+  .support-option {
+    padding: 1rem;
+  }
+
+  .support-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .map-container {
+    height: 250px;
   }
 }

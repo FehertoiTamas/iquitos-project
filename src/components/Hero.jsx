@@ -41,31 +41,6 @@ function Hero() {
     },
   };
 
-  const buttonVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-        delay: 1,
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10,
-      },
-    },
-  };
-
   return (
     <motion.section
       className="hero"
@@ -86,13 +61,6 @@ function Hero() {
         <motion.p className="subtitle" variants={itemVariants}>
           {t("hero.subtitle")}
         </motion.p>
-        <motion.button
-          className="explore-btn"
-          variants={buttonVariants}
-          whileHover="hover"
-        >
-          {t("hero.explore")}
-        </motion.button>
       </motion.div>
     </motion.section>
   );
