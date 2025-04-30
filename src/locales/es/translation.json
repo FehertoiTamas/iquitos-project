@@ -13,6 +13,35 @@
       "3": "Reunión comunitaria"
     }
   },
+  "programs": {
+    "title": "Programas que nunca olvidarás",
+    "items": {
+      "jungle_trek": {
+        "title": "Caminata por la selva",
+        "description": "Recorrido guiado por la selva con guías locales."
+      },
+      "piranha_fishing": {
+        "title": "Pesca de pirañas",
+        "description": "¡Atrapa pirañas con técnicas tradicionales en el Amazonas!"
+      },
+      "dolphin_swim": {
+        "title": "Nado con delfines rosados",
+        "description": "Conoce a los famosos delfines rosados en un tour fluvial."
+      },
+      "campfire": {
+        "title": "Fogata y música",
+        "description": "Música local y cuentos junto a una fogata amazónica."
+      },
+      "bird_watching": {
+        "title": "Observación de aves",
+        "description": "Descubre la increíble diversidad de aves amazónicas."
+      },
+      "canoe_tour": {
+        "title": "Tour en canoa",
+        "description": "Explora los ríos y lagos en una canoa tradicional."
+      }
+    }
+  },
   "culture": {
     "title": "Cultura y Estilo de Vida",
     "food": "Gastronomía Tradicional",

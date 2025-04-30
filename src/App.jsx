@@ -3,10 +3,12 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Programs from "./components/Programs";
 import Culture from "./components/Culture";
 import Support from "./components/Support";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
+
 function App() {
   const { t } = useTranslation();
 
@@ -19,6 +21,7 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Programs />
           <Culture />
           <Gallery />
           <Support />

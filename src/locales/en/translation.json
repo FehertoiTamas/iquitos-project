@@ -13,6 +13,35 @@
       "3": "Community gathering"
     }
   },
+  "programs": {
+    "title": "Programs You'll Never Forget",
+    "items": {
+      "jungle_trek": {
+        "title": "Jungle Trek",
+        "description": "Guided tour through the rainforest with local guides."
+      },
+      "piranha_fishing": {
+        "title": "Piranha Fishing",
+        "description": "Try traditional piranha fishing techniques in the Amazon!"
+      },
+      "dolphin_swim": {
+        "title": "Swim with Pink Dolphins",
+        "description": "Meet the famous pink dolphins on a river tour."
+      },
+      "campfire": {
+        "title": "Campfire and Music",
+        "description": "Local music, stories, and dance under the stars."
+      },
+      "bird_watching": {
+        "title": "Bird Watching",
+        "description": "Discover the incredible diversity of Amazonian birds."
+      },
+      "canoe_tour": {
+        "title": "Canoe Tour",
+        "description": "Explore rivers and lakes in a traditional canoe."
+      }
+    }
+  },
   "culture": {
     "title": "Culture & Lifestyle",
     "food": "Traditional Cuisine",
