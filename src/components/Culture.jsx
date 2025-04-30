@@ -15,7 +15,7 @@ function Culture() {
             <p>{t("culture.foodDescription")}</p>
           </div>
           <div className="culture-item">
-            <img src="/images/music.jpg" alt={t("culture.music")} />
+            <img src="/images/music.webp" alt={t("culture.music")} />
             <h3>{t("culture.music")}</h3>
             <p>{t("culture.musicDescription")}</p>
           </div>
