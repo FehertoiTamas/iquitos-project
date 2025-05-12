@@ -1,5 +1,7 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "./ScrollAnimation";
+import "./About.css";
 
 function About() {
   const { t } = useTranslation();
@@ -30,6 +32,13 @@ function About() {
                     alt="Kamungo bird"
                     className="bird-image"
                   />
+                  <div className="audio-player">
+                    <audio
+                      src="/sounds/sound_of_bird.mp3"
+                      controls
+                      className="bird-sound"
+                    />
+                  </div>
                 </div>
               )}
             </div>
