@@ -3,8 +3,18 @@
   width: 100%;
   max-width: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.audio-text {
+  color: var(--primary-green);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
 }
 
 .bird-sound {
@@ -36,10 +46,18 @@
   .audio-player {
     max-width: 250px;
   }
+
+  .audio-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .audio-player {
     max-width: 200px;
+  }
+
+  .audio-text {
+    font-size: 0.9rem;
   }
 }

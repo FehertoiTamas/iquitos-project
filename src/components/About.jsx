@@ -33,6 +33,7 @@ function About() {
                     className="bird-image"
                   />
                   <div className="audio-player">
+                    <p className="audio-text">{t("about.audioText")}</p>
                     <audio
                       src="/sounds/sound_of_bird.mp3"
                       controls

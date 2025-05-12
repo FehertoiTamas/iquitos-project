@@ -6,11 +6,12 @@
   },
   "about": {
     "title": "About Us",
-    "description": "Our village is located near Iquitos, deep in the heart of the Amazon rainforest, where the river meets the jungle and life flows with nature.\n\nWe are an indigenous community that has lived in harmony with this land for generations. Through fishing, handcrafting, and sustainable living, we preserve our ancestral knowledge and traditions.\n\nThe name Kamungo Lodge comes from the Kamungo bird — a beautiful and rare species native to this region. Just like the Kamungo, our community thrives in the richness of the rainforest, surrounded by the sounds, colors, and rhythms of the Amazon.\n\nWe warmly welcome visitors who wish to experience authentic jungle life, learn from our culture, and reconnect with nature.",
+    "description": "Our community is located near Iquitos, in the heart of the Amazon rainforest, where the river meets the jungle and life flows to the rhythm of nature.\n\nWe are an indigenous community that has lived in harmony with this land for generations. Through fishing, crafts, and sustainable living, we preserve the knowledge and traditions of our ancestors.\n\nThe name Kamungo Lodge comes from the Kamungo bird, a beautiful and rare species native to this region. Like the Kamungo, our community thrives in the richness of the jungle, surrounded by the sounds, colors, and rhythms of the Amazon.\n\nWe welcome with open arms those who wish to experience authentic jungle life, learn from our culture, and reconnect with nature.",
+    "audioText": "🎧 Listen to the song of the Kamungo bird",
     "images": {
-      "1": "Village life",
-      "2": "Amazon river",
-      "3": "Community gathering"
+      "1": "Village Life",
+      "2": "Amazon River",
+      "3": "Community Gathering"
     }
   },
   "programs": {
