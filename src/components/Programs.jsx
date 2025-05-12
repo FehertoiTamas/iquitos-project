@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import ScrollAnimation from "./ScrollAnimation";
 import "./Programs.css";
 
@@ -68,7 +67,7 @@ const Programs = () => {
     if (scrollContainerRef.current) {
       const containerWidth = scrollContainerRef.current.clientWidth;
       const isMobile = window.innerWidth <= 768;
-      const cardWidth = isMobile ? containerWidth : (containerWidth - 4) / 3; // 3 cards with 2rem gap
+      const cardWidth = isMobile ? containerWidth : (containerWidth - 4) / 3;
       const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
       scrollContainerRef.current.scrollBy({
         left: scrollAmount,
@@ -98,48 +97,16 @@ const Programs = () => {
             ref={scrollContainerRef}
             onScroll={handleScroll}
           >
-            {programs.map((program, index) => (
-              <motion.div
-                key={program.id}
-                className="program-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.2,
-                }}
-              >
-                <motion.img
+            {programs.map((program) => (
+              <div key={program.id} className="program-card">
+                <img
                   src={program.icon}
                   alt={t(`programs.items.${program.id}.title`)}
                   className="program-icon"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
                 />
-                <motion.h3
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 + 0.2 }}
-                >
-                  {t(`programs.items.${program.id}.title`)}
-                </motion.h3>
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 + 0.3 }}
-                >
-                  {t(`programs.items.${program.id}.description`)}
-                </motion.p>
-                <motion.div
-                  className="program-details"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 + 0.4 }}
-                >
+                <h3>{t(`programs.items.${program.id}.title`)}</h3>
+                <p>{t(`programs.items.${program.id}.description`)}</p>
+                <div className="program-details">
                   <span className="duration">
                     ⏱️ {t("programs.hours", { count: program.duration })}
                   </span>
@@ -149,8 +116,8 @@ const Programs = () => {
                   <span className="price">
                     💰 {t("programs.price", { price: program.price })}
                   </span>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             ))}
           </div>
 
