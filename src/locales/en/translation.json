@@ -1,12 +1,12 @@
 {
   "hero": {
-    "title": "Welcome to [Village Name]",
+    "title": "Welcome to Kamungo Lodge",
     "subtitle": "A magical place along the Amazon",
     "explore": "Explore"
   },
   "about": {
-    "title": "About the Village",
-    "description": "Our village is located in the heart of the Amazon rainforest, where the river meets the jungle. We are a community of indigenous people who have lived here for generations, maintaining our traditional way of life through fishing, crafting, and sustainable living.",
+    "title": "About Us",
+    "description": "Our village is located near Iquitos, deep in the heart of the Amazon rainforest, where the river meets the jungle and life flows with nature.\n\nWe are an indigenous community that has lived in harmony with this land for generations. Through fishing, handcrafting, and sustainable living, we preserve our ancestral knowledge and traditions.\n\nThe name Kamungo Lodge comes from the Kamungo bird — a beautiful and rare species native to this region. Just like the Kamungo, our community thrives in the richness of the rainforest, surrounded by the sounds, colors, and rhythms of the Amazon.\n\nWe warmly welcome visitors who wish to experience authentic jungle life, learn from our culture, and reconnect with nature.",
     "images": {
       "1": "Village life",
       "2": "Amazon river",

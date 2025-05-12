@@ -171,7 +171,33 @@ section h2 {
   letter-spacing: -0.02em;
 }
 
-.about,
+.about {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 1400px;
+  width: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/birds.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
 .culture,
 .support,
 .contact {
@@ -192,7 +218,7 @@ section h2 {
   width: 200px;
   height: auto;
   opacity: 0.1;
-  z-index: 0;
+  z-index: 1;
 }
 
 .about-decoration.left {
@@ -429,6 +455,10 @@ footer {
   .map-container {
     height: 300px;
   }
+
+  .bird-image {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -461,6 +491,10 @@ footer {
   .map-container {
     height: 250px;
   }
+
+  .bird-image {
+    max-width: 200px;
+  }
 }
 
 h1,
@@ -472,4 +506,34 @@ h6 {
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.2;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.paragraph-container {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.bird-image-container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.bird-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.bird-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }

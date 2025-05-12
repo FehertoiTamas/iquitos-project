@@ -3,6 +3,7 @@ import ScrollAnimation from "./ScrollAnimation";
 
 function About() {
   const { t } = useTranslation();
+  const description = t("about.description");
 
   return (
     <section className="about" id="about">
@@ -19,7 +20,20 @@ function About() {
       <ScrollAnimation className="about-content">
         <h2>{t("about.title")}</h2>
         <div className="about-text">
-          <p>{t("about.description")}</p>
+          {description.split("\n\n").map((paragraph, index) => (
+            <div key={index} className="paragraph-container">
+              <p>{paragraph}</p>
+              {index === 2 && (
+                <div className="bird-image-container">
+                  <img
+                    src="/images/kamungo-bird.webp"
+                    alt="Kamungo bird"
+                    className="bird-image"
+                  />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
         <div className="about-gallery">
           <img src="/images/village-1.webp" alt={t("about.images.1")} />
