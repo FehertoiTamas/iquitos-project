@@ -90,9 +90,7 @@ const Programs = () => {
               className="nav-arrow left"
               onClick={() => scroll("left")}
               aria-label="Previous programs"
-            >
-              &lt;
-            </button>
+            />
           )}
 
           <div
@@ -133,9 +131,7 @@ const Programs = () => {
               className="nav-arrow right"
               onClick={() => scroll("right")}
               aria-label="Next programs"
-            >
-              &gt;
-            </button>
+            />
           )}
         </div>
       </ScrollAnimation>
