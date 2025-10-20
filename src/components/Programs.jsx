@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from "./ScrollAnimation";
 import "./Programs.css";
@@ -9,61 +9,64 @@ const Programs = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
 
-  const programs = [
-    {
-      id: "jungle_trek",
-      icon: "/images/jungle-trek.webp",
-      duration: "3-4",
-      difficulty: "medium",
-      price: "50",
-    },
-    {
-      id: "piranha_fishing",
-      icon: "/images/piranha-fishing.webp",
-      duration: "2-3",
-      difficulty: "easy",
-      price: "40",
-    },
-    {
-      id: "dolphin_swim",
-      icon: "/images/dolphin-swim.webp",
-      duration: "4-5",
-      difficulty: "easy",
-      price: "60",
-    },
-    {
-      id: "campfire",
-      icon: "/images/campfire.webp",
-      duration: "2",
-      difficulty: "easy",
-      price: "30",
-    },
-    {
-      id: "bird_watching",
-      icon: "/images/bird-watching.webp",
-      duration: "3",
-      difficulty: "easy",
-      price: "45",
-    },
-    {
-      id: "canoe_tour",
-      icon: "/images/canoe-tour.webp",
-      duration: "2-3",
-      difficulty: "medium",
-      price: "40",
-    },
-  ];
+  const programs = useMemo(
+    () => [
+      {
+        id: "jungle_trek",
+        icon: "/images/jungle-trek.webp",
+        duration: "3-4",
+        difficulty: "medium",
+        price: "50",
+      },
+      {
+        id: "piranha_fishing",
+        icon: "/images/piranha-fishing.webp",
+        duration: "2-3",
+        difficulty: "easy",
+        price: "40",
+      },
+      {
+        id: "dolphin_swim",
+        icon: "/images/dolphin-swim.webp",
+        duration: "4-5",
+        difficulty: "easy",
+        price: "60",
+      },
+      {
+        id: "campfire",
+        icon: "/images/campfire.webp",
+        duration: "2",
+        difficulty: "easy",
+        price: "30",
+      },
+      {
+        id: "bird_watching",
+        icon: "/images/bird-watching.webp",
+        duration: "3",
+        difficulty: "easy",
+        price: "45",
+      },
+      {
+        id: "canoe_tour",
+        icon: "/images/canoe-tour.webp",
+        duration: "2-3",
+        difficulty: "medium",
+        price: "40",
+      },
+    ],
+    []
+  );
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } =
         scrollContainerRef.current;
       setShowLeftArrow(scrollLeft > 0);
       setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
     }
-  };
+  }, []);
 
-  const scroll = (direction) => {
+  const scroll = useCallback((direction) => {
     if (scrollContainerRef.current) {
       const containerWidth = scrollContainerRef.current.clientWidth;
       const isMobile = window.innerWidth <= 768;
@@ -74,7 +77,7 @@ const Programs = () => {
         behavior: "smooth",
       });
     }
-  };
+  }, []);
 
   return (
     <section className="programs-section" id="programs">
@@ -103,6 +106,10 @@ const Programs = () => {
                   src={program.icon}
                   alt={t(`programs.items.${program.id}.title`)}
                   className="program-icon"
+                  loading="lazy"
+                  decoding="async"
+                  width="200"
+                  height="200"
                 />
                 <h3>{t(`programs.items.${program.id}.title`)}</h3>
                 <p>{t(`programs.items.${program.id}.description`)}</p>

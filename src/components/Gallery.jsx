@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "./Gallery.css";
@@ -7,27 +7,31 @@ const Gallery = () => {
   const { t } = useTranslation();
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
-  const images = [
-    { id: 1, src: "/images/gallery1.webp", alt: "Gallery Image 1" },
-    { id: 2, src: "/images/gallery2.webp", alt: "Gallery Image 2" },
-    { id: 3, src: "/images/gallery3.webp", alt: "Gallery Image 3" },
-    { id: 4, src: "/images/gallery4.webp", alt: "Gallery Image 4" },
-    { id: 5, src: "/images/gallery5.webp", alt: "Gallery Image 5" },
-    { id: 6, src: "/images/gallery6.webp", alt: "Gallery Image 6" },
-  ];
-  const closeModal = () => setSelectedImageIndex(null);
+  const images = useMemo(
+    () => [
+      { id: 1, src: "/images/gallery1.webp", alt: "Gallery Image 1" },
+      { id: 2, src: "/images/gallery2.webp", alt: "Gallery Image 2" },
+      { id: 3, src: "/images/gallery3.webp", alt: "Gallery Image 3" },
+      { id: 4, src: "/images/gallery4.webp", alt: "Gallery Image 4" },
+      { id: 5, src: "/images/gallery5.webp", alt: "Gallery Image 5" },
+      { id: 6, src: "/images/gallery6.webp", alt: "Gallery Image 6" },
+    ],
+    []
+  );
 
-  const showPreviousImage = () => {
+  const closeModal = useCallback(() => setSelectedImageIndex(null), []);
+
+  const showPreviousImage = useCallback(() => {
     setSelectedImageIndex((prevIndex) =>
       prevIndex > 0 ? prevIndex - 1 : images.length - 1
     );
-  };
+  }, [images.length]);
 
-  const showNextImage = () => {
+  const showNextImage = useCallback(() => {
     setSelectedImageIndex((prevIndex) =>
       prevIndex < images.length - 1 ? prevIndex + 1 : 0
     );
-  };
+  }, [images.length]);
 
   return (
     <section className="gallery-section" id="gallery">
@@ -48,7 +52,13 @@ const Gallery = () => {
                 delay: index * 0.2, // Késleltetés a képek közötti animációhoz
               }}
             >
-              <img src={image.src} alt={image.alt} className="gallery-image" />
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="gallery-image"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="gallery-overlay" />
             </motion.div>
           ))}

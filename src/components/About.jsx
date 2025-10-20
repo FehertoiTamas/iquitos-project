@@ -31,6 +31,8 @@ function About() {
                     src="/images/kamungo-bird.webp"
                     alt="Kamungo bird"
                     className="bird-image"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="audio-player">
                     <p className="audio-text">{t("about.audioText")}</p>
@@ -38,6 +40,7 @@ function About() {
                       src="/sounds/sound_of_bird.mp3"
                       controls
                       className="bird-sound"
+                      preload="none"
                     />
                   </div>
                 </div>
@@ -46,9 +49,24 @@ function About() {
           ))}
         </div>
         <div className="about-gallery">
-          <img src="/images/village-1.webp" alt={t("about.images.1")} />
-          <img src="/images/village-2.webp" alt={t("about.images.2")} />
-          <img src="/images/village-3.webp" alt={t("about.images.3")} />
+          <img
+            src="/images/village-1.webp"
+            alt={t("about.images.1")}
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/village-2.webp"
+            alt={t("about.images.2")}
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/images/village-3.webp"
+            alt={t("about.images.3")}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </ScrollAnimation>
     </section>
