@@ -79,6 +79,15 @@ header {
   background: rgba(30, 30, 30, 0.8);
   backdrop-filter: blur(10px);
   gap: 2rem;
+  transition: transform 0.3s ease;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+header.visible {
+  transform: translateY(0);
 }
 
 .header-logo {
