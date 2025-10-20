@@ -69,9 +69,45 @@ body::before {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
-  padding: 1rem;
+  padding: 1rem 2rem;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  gap: 2rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--white);
+  border: 2px solid var(--primary-green);
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.header-logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .language-switcher {
@@ -416,6 +452,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 0.75rem 1rem;
+  }
+
+  .header-logo img {
+    height: 50px;
+    width: 50px;
+  }
+
   section {
     padding: 3rem 1rem;
   }
@@ -462,6 +507,15 @@ footer {
 }
 
 @media (max-width: 480px) {
+  header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .header-logo img {
+    height: 40px;
+    width: 40px;
+  }
+
   section {
     padding: 2rem 0.5rem;
   }

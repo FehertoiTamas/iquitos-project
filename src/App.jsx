@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Programs from "./components/Programs";
@@ -16,6 +17,10 @@ function App() {
     <Suspense fallback="loading">
       <div className="app">
         <header>
+          <div className="header-logo">
+            <img src="/images/logo.webp" alt="Kamungo Lodge" />
+          </div>
+          <Navigation />
           <LanguageSwitcher />
         </header>
         <main>

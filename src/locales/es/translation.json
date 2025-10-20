@@ -1,4 +1,12 @@
 {
+  "nav": {
+    "about": "Sobre Nosotros",
+    "programs": "Programas",
+    "culture": "Cultura",
+    "gallery": "Galería",
+    "support": "Apoyar",
+    "contact": "Contacto"
+  },
   "hero": {
     "title": "Bienvenido a Kamungo Lodge",
     "subtitle": "Un lugar mágico a lo largo del Amazonas",

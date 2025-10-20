@@ -1,4 +1,12 @@
 {
+  "nav": {
+    "about": "About Us",
+    "programs": "Programs",
+    "culture": "Culture",
+    "gallery": "Gallery",
+    "support": "Support",
+    "contact": "Contact"
+  },
   "hero": {
     "title": "Welcome to Kamungo Lodge",
     "subtitle": "A magical place along the Amazon",
